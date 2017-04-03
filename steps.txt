@@ -1,0 +1,650 @@
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Diverse.System/Desktop/Ex 0/.git/
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ ls -la
+total 44
+drwxr-xr-x 1 Diverse.System 197121     0 Apr  2 18:51  ./
+drwxr-xr-x 1 Diverse.System 197121     0 Apr  2 20:52  ../
+drwxr-xr-x 1 Diverse.System 197121     0 Apr  2 23:08  .git/
+-rw-r--r-- 1 Diverse.System 197121 15615 Apr  2 18:40  Exercise_0.docx
+-rw-r--r-- 1 Diverse.System 197121 11527 Apr  2 18:51 'Github account.docx'
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git add .
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Github account.docx
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Github account.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        about.html
+        index.html
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git add .
+warning: LF will be replaced by CRLF in about.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Github account.docx
+        new file:   about.html
+        new file:   index.html
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git commit -m "tutorial files"
+[master 233b6a3] tutorial files
+ 3 files changed, 28 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 index.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git log
+commit 233b6a36bb29052a5c459b0f75bf4190756a28be
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 23:10:44 2017 -0700
+
+    tutorial files
+
+commit a7319a13dab293448715b1bb80e3fa9e89a97dde
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:45:48 2017 -0700
+
+    second commit
+
+commit 3a1319f7500d24c38dddcc42b5b6d470d925bbf9
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:15:35 2017 -0700
+
+    first commit
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.html
+about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.htm
+error: pathspec 'about.htm' did not match any file(s) known to git.
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git add .
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git commit -m "revision 1"
+[master 3829e66] revision 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git log
+commit 3829e6653bc08378c7c98aeca982297264c9c53a
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 23:14:23 2017 -0700
+
+    revision 1
+
+commit 233b6a36bb29052a5c459b0f75bf4190756a28be
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 23:10:44 2017 -0700
+
+    tutorial files
+
+commit a7319a13dab293448715b1bb80e3fa9e89a97dde
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:45:48 2017 -0700
+
+    second commit
+
+commit 3a1319f7500d24c38dddcc42b5b6d470d925bbf9
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:15:35 2017 -0700
+
+    first commit
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+g
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git add .
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    about.html
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git reset HEAD about.html
+Unstaged changes after reset:
+D       about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git rm about.html
+rm 'about.html'
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    about.html
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git reset HEAD about.html
+Unstaged changes after reset:
+D       about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ ls -la
+total 46
+drwxr-xr-x 1 Diverse.System 197121     0 Apr  2 23:18  ./
+drwxr-xr-x 1 Diverse.System 197121     0 Apr  2 20:52  ../
+drwxr-xr-x 1 Diverse.System 197121     0 Apr  2 23:18  .git/
+-rw-r--r-- 1 Diverse.System 197121   223 Apr  2 23:18  about.html
+-rw-r--r-- 1 Diverse.System 197121 15615 Apr  2 18:40  Exercise_0.docx
+-rw-r--r-- 1 Diverse.System 197121 11527 Apr  2 18:51 'Github account.docx'
+-rw-r--r-- 1 Diverse.System 197121   215 May 27  2015  index.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git rm about.html
+rm 'about.html'
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    about.html
+
+gi
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git add --all
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    about.html
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.html
+error: pathspec 'about.html' did not match any file(s) known to git.
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git reset HEAD about.html
+Unstaged changes after reset:
+D       about.html
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout about.html
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git log
+commit 3829e6653bc08378c7c98aeca982297264c9c53a
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 23:14:23 2017 -0700
+
+    revision 1
+
+commit 233b6a36bb29052a5c459b0f75bf4190756a28be
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 23:10:44 2017 -0700
+
+    tutorial files
+
+commit a7319a13dab293448715b1bb80e3fa9e89a97dde
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:45:48 2017 -0700
+
+    second commit
+
+commit 3a1319f7500d24c38dddcc42b5b6d470d925bbf9
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:15:35 2017 -0700
+
+    first commit
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git checkout a7319a13dab293448715b1bb80e3fa9e89a97dde
+Note: checking out 'a7319a13dab293448715b1bb80e3fa9e89a97dde'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a7319a1... second commit
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((a7319a1...))
+$ git log
+commit a7319a13dab293448715b1bb80e3fa9e89a97dde
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:45:48 2017 -0700
+
+    second commit
+
+commit 3a1319f7500d24c38dddcc42b5b6d470d925bbf9
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:15:35 2017 -0700
+
+    first commit
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((a7319a1...))
+$ git branch
+* (HEAD detached at a7319a1)
+  master
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((a7319a1...))
+$ git status
+HEAD detached at a7319a1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Github account.docx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((a7319a1...))
+$ git add .
+git
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((a7319a1...))
+$ git commit -m "revision"
+[detached HEAD e66db0a] revision
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((e66db0a...))
+$ git log
+commit e66db0a0aac75bc94164fb89b12af2e1d45da7b9
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 23:23:27 2017 -0700
+
+    revision
+
+commit a7319a13dab293448715b1bb80e3fa9e89a97dde
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:45:48 2017 -0700
+
+    second commit
+
+commit 3a1319f7500d24c38dddcc42b5b6d470d925bbf9
+Author: Michael Ly <michaelly1@cpp.edu>
+Date:   Sun Apr 2 18:15:35 2017 -0700
+
+    first commit
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 ((e66db0a...))
+$ git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  e66db0a revision
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> e66db0a
+
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git branch revisionb e66db0a
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git branch
+* master
+  revisionb
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git branch app01
+git b
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git branch
+  app01
+* master
+  revisionb
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git merge app01
+Already up-to-date.
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ git branch -D app01
+Deleted branch app01 (was 3829e66).
+
+Diverse.System@Axion MINGW64 ~/Desktop/Ex 0 (master)
+$ cd ~/Desktop
+
+Diverse.System@Axion MINGW64 ~/Desktop
+$ git clone https://github.com/planetoftheweb/angulardata.git
+Cloning into 'angulardata'...
+remote: Counting objects: 1035, done.
+remote: Total 1035 (delta 0), reused 0 (delta 0), pack-reused 1035
+Receiving objects: 100% (1035/1035), 2.33 MiB | 1.10 MiB/s, done.
+Resolving deltas: 100% (501/501), done.
+
+Diverse.System@Axion MINGW64 ~/Desktop
+$ git log
+fatal: Not a git repository (or any of the parent directories): .git
+
+Diverse.System@Axion MINGW64 ~/Desktop
+$ cd angulardata/
+
+Diverse.System@Axion MINGW64 ~/Desktop/angulardata (master)
+$ ls -la
+total 1334
+drwxr-xr-x 1 Diverse.System 197121       0 Apr  2 23:32 ./
+drwxr-xr-x 1 Diverse.System 197121       0 Apr  2 23:32 ../
+drwxr-xr-x 1 Diverse.System 197121       0 Apr  2 23:32 .git/
+-rw-r--r-- 1 Diverse.System 197121      44 Apr  2 23:32 .gitignore
+drwxr-xr-x 1 Diverse.System 197121       0 Apr  2 23:32 builds/
+-rw-r--r-- 1 Diverse.System 197121     818 Apr  2 23:32 gulpfile.js
+-rw-r--r-- 1 Diverse.System 197121 1335446 Apr  2 23:32 hero.png
+-rw-r--r-- 1 Diverse.System 197121     462 Apr  2 23:32 package.json
+-rw-r--r-- 1 Diverse.System 197121    2676 Apr  2 23:32 README.md
+
+Diverse.System@Axion MINGW64 ~/Desktop/angulardata (master)
+$ git log
+commit b48c1b803f6f74492948020759a7cc4e87f04a1b
+Author: Ray Villalobos <ray@lynda.com>
+Date:   Sat Nov 19 23:59:21 2016 -0500
+
+    04_06e Security Rules
+Diverse.System@Axion MINGW64 ~/Desktop/angulardata (master)
+$ git branch
+* master
+
+Diverse.System@Axion MINGW64 ~/Desktop/angulardata (master)
+$ cd ~/Desktop
+
+Diverse.System@Axion MINGW64 ~/Desktop
+$ git clone https://github.com/planetoftheweb/responsivebootstrap.git
+Cloning into 'responsivebootstrap'...
+remote: Counting objects: 262, done.
+remote: Total 262 (delta 0), reused 0 (delta 0), pack-reused 262
+Receiving objects: 100% (262/262), 8.06 MiB | 1.94 MiB/s, done.
+Resolving deltas: 100% (90/90), done.
+
+Diverse.System@Axion MINGW64 ~/Desktop/responsivebootstrap (master)
+$ git branch
+* master
+
+Diverse.System@Axion MINGW64 ~/Desktop/responsivebootstrap (master)
+$ git branch -a
+* master
+  remotes/origin/00_start
+  remotes/origin/01_02
+  remotes/origin/01_03
+  remotes/origin/01_04
+  remotes/origin/01_05
+  remotes/origin/01_06
+  remotes/origin/01_07
+  remotes/origin/01_08
+  remotes/origin/01_09
+  remotes/origin/01_10
+  remotes/origin/01_bootstrap
+  remotes/origin/02_01
+  remotes/origin/02_02
+  remotes/origin/02_03
+  remotes/origin/02_04
+  remotes/origin/02_05
+  remotes/origin/02_06
+  remotes/origin/02_07
+  remotes/origin/02_08
+  remotes/origin/02_08p
+  remotes/origin/02_09
+  remotes/origin/02_10
+  remotes/origin/03_01
+  remotes/origin/03_02
+  remotes/origin/03_03
+  remotes/origin/03_04
+  remotes/origin/03_05
+  remotes/origin/03_06
+  remotes/origin/03_07
+  remotes/origin/03_07b
+  remotes/origin/99_target
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/post_release_changes
+  remotes/origin/work
+
+Diverse.System@Axion MINGW64 ~/Desktop/responsivebootstrap (master)
+$ git checkout -b 02_01 origin/02_01
+Switched to a new branch '02_01'
+Branch 02_01 set up to track remote branch 02_01 from origin.
+
+Diverse.System@Axion MINGW64 ~/Desktop/responsivebootstrap (02_01)
+$ git branch
+* 02_01
+  master
+
+Diverse.System@Axion MINGW64 ~/Desktop (master)
+$ cd ex
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex
+$ git clone --mirror https://github.com/planetoftheweb/responsivebootstrap.git .git
+Cloning into bare repository '.git'...
+remote: Counting objects: 262, done.
+remote: Total 262 (delta 0), reused 0 (delta 0), pack-reused 262
+Receiving objects: 100% (262/262), 8.06 MiB | 2.04 MiB/s, done.
+Resolving deltas: 100% (90/90), done.
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git config --bool core.bare false
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git reset --hard
+HEAD is now at 0754a9f Update README.md
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git branch
+  00_start
+  01_02
+  01_03
+  01_04
+  01_05
+  01_06
+  01_07
+  01_08
+  01_09
+  01_10
+  01_bootstrap
+  02_01
+  02_02
+  02_03
+  02_04
+  02_05
+  02_06
+  02_07
+  02_08
+  02_08p
+  02_09
+  02_10
+  03_01
+  03_02
+  03_03
+  03_04
+  03_05
+  03_06
+  03_07
+  03_07b
+  99_target
+* master
+  post_release_changes
+  work
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git clone -b 00_start https://github.com/planetoftheweb/responsivebootstrap.git
+Cloning into 'responsivebootstrap'...
+remote: Counting objects: 262, done.
+remote: Total 262 (delta 0), reused 0 (delta 0), pack-reused 262
+Receiving objects: 100% (262/262), 8.06 MiB | 2.23 MiB/s, done.
+Resolving deltas: 100% (90/90), done.
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex
+$ rm -dfr .git
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex
+$ git log
+fatal: Not a git repository (or any of the parent directories): .git
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex
+$ git init
+Initialized empty Git repository in C:/Users/Diverse.System/Desktop/ex/.git/
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+gi
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git add .
+
+Diverse.System@Axion MINGW64 ~/Desktop/ex (master)
+$ git commit -m "first commit"
+[master (root-commit) 7fa084c] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 160000 responsivebootstrap
+
